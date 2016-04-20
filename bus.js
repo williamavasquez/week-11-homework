@@ -14,8 +14,19 @@ function Bus(driverName,color,gas){
     // this.studentsOnTheBus.push(addingStudent.promptStudent());
   };
   this.busChatter = function(){
-    console.log('catch phrases if they can have fun one by one');
+    for (var i = 0; i < this.studentsOnTheBus.length; i++) {
+      if (this.studentsOnTheBus[i].canStudentHaveFun() == true) {
+        console.log(this.studentsOnTheBus[i].catchPhrase);
+      }
+    }
   };
+  // this.removeStudent = function(){
+  //   prompt.start()
+  //   prompt.get(['name'], function (err, result) {
+  //     if (this.studentsOnTheBus.indexOf(this.Student.name)>0) {
+  //
+  //     }
+  // }
 };
 
 module.exports = Bus;

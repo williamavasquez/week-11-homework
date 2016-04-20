@@ -10,7 +10,7 @@ function Student(name, gender, grade, GPA, detentions, sleepingInClass, catchPhr
   this.catchPhrase = catchPhrase;
   this.canStudentHaveFun = function(){
      if ((this.detentions<10) && (this.GPA>2)) {
-       console.log("you can have fun");
+      return true
      }
    };
    this.promptStudent = function(){
@@ -18,9 +18,9 @@ function Student(name, gender, grade, GPA, detentions, sleepingInClass, catchPhr
      prompt.get(['name', 'gender', 'grade', 'GPA', 'detentions', 'sleepingInClass', 'catchPhrase'], function (err, result) {
        studentObject = new Student(result.name, result.gender, result.grade, result.GPA, result.detentions, result.sleepingInClass, result.catchPhrase)
        return studentObject;
-       studentObject.canStudentHaveFun();
      });
 
    }
 }
+
 module.exports = Student;
