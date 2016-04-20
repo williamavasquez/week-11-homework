@@ -1,7 +1,8 @@
-var student = require('./student.js');
 var bus = require('./bus.js');
 
-var newStudent = student.Student(hi)
-console.log(newStudent);
-// var newBus = new bus(william, grey, 300)
-// console.log(newBus);
+var magicBus = new bus('turtle man','green',300);
+
+magicBus.studentEntersBus('william','M','A',4,1, "False" ,'I think we need a turtle to solve this');
+magicBus.studentEntersBus('william','M','A',4,1, "False" ,'I think we need a turtle to solve this');
+magicBus.studentEntersBus('william','M','A',4,1, "False" ,'I think we need a turtle to solve this');
+console.log(magicBus.studentsOnTheBus);
